@@ -18,29 +18,40 @@ This project explores the relationship between trader performance and market sen
   - Building and evaluating classification models (Logistic Regression, Random Forest, XGBoost)  
   - Model validation and interpretation
 
+## Exploratory Data Analysis (Sample Visualizations)
+
+### Classification Label Distribution
+
+![Classification Distribution](Plots/Plot1.png)  
+*Shows the proportion of each market sentiment class in the dataset, with percentages displayed inside bars.*
+
+### Histograms of Key Numeric Features
+
+![Feature Histograms](Plots/Plot2.png)
+*Histograms for numerical variables like Closed PnL, Execution Price, Size Tokens, etc., showing their distributions.*
+
+### Scatter Plot of Size USD vs Closed PnL by Sentiment
+
+![Scatter Plot](Plots/Plot3.png)
+*Scatter plot colored by market sentiment showing relationship between trade size in USD and profit & loss.*
+
+### Boxplot of Closed PnL by Classification
+
+![Boxplot Closed PnL](Plots/Plot4)
+
+*This boxplot shows the distribution of closed profit and loss for each market sentiment class, highlighting medians and outliers.*
+
+## Modeling Results
+
+- Achieved up to **99% accuracy** on test data with models such as Logistic Regression, Random Forest, and XGBoost.
+- Performance metrics including precision, recall, and F1-score confirm the robustness of the models.
+
 ## File Structure
 
 - `fear_greed_index.csv` — Market sentiment data containing daily Fear & Greed scores  
 - `trader_data.csv` — Trader transaction data for 2024  
 - `Trader_Sentiment_Analysis.ipynb` — Jupyter notebook with full analysis, EDA, modeling, and results  
-
-## Key Steps & Highlights
-
-1. **Data Loading & Cleaning:**  
-   Handled missing data, aligned timestamps between datasets, and filtered relevant records.
-
-2. **Feature Engineering:**  
-   Encoded categorical variables such as `Side` and `Direction`, and created binary target labels.
-
-3. **Exploratory Data Analysis:**  
-   Visualized distributions of key numeric features, classification label distributions, and relationships via scatterplots.
-
-4. **Modeling:**  
-   Implemented multiple classification algorithms with train-test splits and cross-validation.  
-   Achieved high accuracy (~99%) in predicting market sentiment categories.
-
-5. **Model Interpretation:**  
-   Analyzed feature importances and classification reports to evaluate model strengths.
+- `images/` — Folder containing all plot images used in this README
 
 ## How to Run
 
@@ -59,7 +70,9 @@ This project explores the relationship between trader performance and market sen
 - scikit-learn  
 - xgboost
 
-You can install required packages using:
+Install dependencies with:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+
+
